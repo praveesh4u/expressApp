@@ -1,0 +1,53 @@
+{"level":"info","message":"Test log from winston","timestamp":"2016-06-16T07:19:55.453Z"}
+{"level":"info","message":"Test log from winston","timestamp":"2016-06-16T07:19:56.940Z"}
+{"level":"info","message":"Test log from winston","timestamp":"2016-06-16T07:20:37.173Z"}
+{"domain":null,"_events":{},"_eventsCount":0,"transports":{"console":{"domain":null,"_events":{},"_eventsCount":0,"silent":false,"raw":false,"name":"console","handleExceptions":false,"exceptionsLevel":"error","humanReadableUnhandledException":false,"json":false,"colorize":false,"prettyPrint":false,"timestamp":false,"showLevel":true,"label":null,"logstash":false,"depth":null,"align":false,"stderrLevels":{"error":true,"debug":true},"eol":"\n"},"file":{"domain":null,"_events":{},"_eventsCount":0,"silent":false,"raw":false,"name":"file","handleExceptions":false,"exceptionsLevel":"error","humanReadableUnhandledException":false,"filename":"Detailed Log.log","_basename":"Detailed Log.log","dirname":".","options":{"flags":"a","highWaterMark":24},"json":true,"logstash":false,"colorize":false,"maxsize":null,"rotationFormat":false,"zippedArchive":false,"maxFiles":null,"prettyPrint":false,"label":null,"timestamp":true,"eol":"\n","tailable":false,"depth":null,"showLevel":true,"maxRetries":2,"_size":0,"_created":0,"_buffer":[["{\"level\":\"info\",\"message\":\"Test log from winston\",\"timestamp\":\"2016-06-16T07:20:37.173Z\"}\n",null]],"_draining":false,"_opening":false,"_failures":0,"_archive":null,"opening":true}},"_names":["console","file"],"padLevels":false,"levels":{"error":0,"warn":1,"info":2,"verbose":3,"debug":4,"silly":5},"level":"info","emitErrs":false,"stripColors":false,"exitOnError":true,"exceptionHandlers":{},"profilers":{},"rewriters":[],"filters":[],"message":"","timestamp":"2016-06-16T07:20:37.178Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:32:53.813Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:15.535Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:35.707Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:40.694Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:45.663Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:50.709Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:46:55.712Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:47:08.067Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:47:58.257Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:48:43.340Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:03.392Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:23.529Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:28.527Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:33.578Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:53.489Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:49:58.496Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:50:03.509Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:51:43.732Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:51:53.738Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:54:29.078Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:54:49.117Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:54:54.164Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:55:09.175Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:55:44.253Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:55:49.276Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:55:54.354Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:55:59.351Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:04.606Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:09.336Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:14.664Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:19.394Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:24.370Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:29.458Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:49.413Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:54.590Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:56:59.418Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:57:24.504Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:57:29.516Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:57:34.536Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T07:59:04.770Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T08:58:07.483Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T08:58:27.598Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T08:58:32.505Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T08:58:47.534Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T13:14:46.374Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T13:15:36.440Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T13:18:31.909Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T13:25:52.832Z"}
+{"level":"info","message":"","timestamp":"2016-06-16T13:34:13.975Z"}

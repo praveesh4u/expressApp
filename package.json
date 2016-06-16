@@ -1,0 +1,24 @@
+{
+  "name": "express-app",
+  "version": "1.0.0",
+  "description": "Learn and Code",
+  "main": "app,js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "praveesh4u@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "connect-redis": "^3.0.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.13.4",
+    "express-session": "^1.13.0",
+    "hogan": "^1.0.2",
+    "hogan-express": "^0.5.2",
+    "morgan": "^1.7.0",
+    "redis": "^2.6.2",
+    "sequelize": "^3.23.3",
+    "winston": "^2.2.0"
+  }
+}
