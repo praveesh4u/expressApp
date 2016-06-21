@@ -2,9 +2,11 @@
 (function() {
   var sequelize;
   'use strict';
-  var Sequelize, basename, config, db, env, fs, path, sequelize;
+  var Sequelize, basename, config, db, env, fs, mysql, path, sequelize;
 
   fs = require('fs');
+
+  mysql = require('mysql');
 
   path = require('path');
 

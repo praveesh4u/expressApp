@@ -4,7 +4,22 @@
     var router;
     router = express.Router();
     router.get('/user', function(req, res, next) {
-      return res.render('user-list');
+      res.locals = {
+        'message': 'LiteBreeze',
+        'data': [
+          {
+            'name': 'Praveesh',
+            'id': 2
+          }, {
+            'name': 'Praveen',
+            'id': 10
+          }, {
+            'name': 'Akhil',
+            'id': 15
+          }
+        ]
+      };
+      return res.render('user-list', {});
     });
     return app.use('/', router);
   };

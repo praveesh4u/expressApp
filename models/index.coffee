@@ -1,6 +1,7 @@
 `var sequelize`
 'use strict'
 fs = require('fs')
+mysql = require('mysql')
 path = require('path')
 Sequelize = require('sequelize')
 basename = path.basename(module.filename)
