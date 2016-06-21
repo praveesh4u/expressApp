@@ -7,7 +7,7 @@ var express = require('express'),
     session = require('express-session'),
     env = process.env.NODE_ENV || 'development',
     winston = require('winston'),
-    helper = require('./helpers/helper'),
+    GLOBAL.helper = require('./helpers/helper'),
     redis = require('redis'),
     redisStore = require('connect-redis')(session),
     bodyParser = require('body-parser'),
@@ -46,6 +46,7 @@ app.use(bodyParser.json());
 app.use(session(
     {
         secret:'liteBreeze',
+        cookie: { maxAge: 60000 },
         store: new redisStore({
             host: 'localhost',
             port: 6379,
@@ -56,39 +57,23 @@ app.use(session(
         saveUninitialized: true
     }
 ));
+
+/** Database Sync**/
 GLOBAL.db.sequelize.sync({
     // force: true,
 }).then(function(){
     console.log('Database Sync finished');
 });
 
+helper.hashPassword('qwerty87','$2a$10$lh6oTMzYYEphJ1bHN/oveO',function(err, hash){
+    console.log(hash);
+});
 
 
+/** Passport JS **/
 app.use(passport.initialize());
 app.use(passport.session());
 require('./auth/passportAuth')(passport, LocalStrategy);
-
-
-
-// var User = GLOBAL.db.User;
-// User.findByEmail('praveesh4u@gmail.com',function(user){
-//     console.log(user.email);
-// });
-
-
-// User.createNewUser(
-//     {
-//         'first_name' : 'Praveen',
-//         'last_name' : 'A',
-//         'bio': 'Test Account',
-//         'password': 'qwerty87',
-//         'email' : 'praveesh4u@gmail.com'
-//
-//     },function(err, user){
-//         console.log(err);
-//         console.log('user Created ');
-//     }
-// );
 
 
 /** routes **/

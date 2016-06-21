@@ -1,8 +1,9 @@
 'use strict'
 bcrypt = require('bcrypt')
 saltRounds = 10
-phonetic = require('phonetic');
-_         = require "underscore";
+phonetic = require('phonetic')
+_         = require "underscore"
+helper = GLOBAL.helper
 
 module.exports = (sequelize, DataTypes) ->
   User = sequelize.define('User', {
@@ -39,6 +40,9 @@ module.exports = (sequelize, DataTypes) ->
     findByEmail: (email,cb=()->)->
       User.find({where:{email: email}})
       .then cb
+    findById: (id,cb=()->)->
+      User.find({where:{id: id}})
+      .then cb
 
 
     passwordMeetsRequirements: (password = "")->
@@ -61,7 +65,7 @@ module.exports = (sequelize, DataTypes) ->
       console.log 'passed'
       User.genSalt saltRounds, (err, hash)->
         return callback(err,null) if err
-        User.hashPassword userData.password, hash, (err, hashedPassword)->
+        helper.hashPassword userData.password, hash, (err, hashedPassword)->
           userData.password = hashedPassword
           userData.salt = hash
           User.create(userData).then callback
@@ -73,7 +77,7 @@ module.exports = (sequelize, DataTypes) ->
 
   instanceMethods :
     isValidPassword: (password, cb = ()->)->
-      @hashPassword password, @salt,(err, hashedPassword)=>
+      helper.hashPassword password, @salt,(err, hashedPassword)=>
         return cb(err, null) if err
         if hashedPassword is @password
           status =true

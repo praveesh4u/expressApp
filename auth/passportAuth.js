@@ -24,10 +24,13 @@
       });
     }));
     passport.serializeUser(function(user, done) {
-      return done(null, user.id);
+      done(null, user.id);
     });
-    passport.deserializeUser(function(id, done) {
-      return GLOBAL.db.User.findById(id, done);
+    return passport.deserializeUser(function(id, done) {
+      GLOBAL.db.User.findById(id, function(user) {
+        console.log(user.email);
+        done(null, user);
+      });
     });
   };
 

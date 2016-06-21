@@ -26,6 +26,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Last link</a>
                     </li>
+                    {{ #req.user }}
+                    <li class="nav-item pull-right">
+                        <a class="nav-link" href="/logout">Logout</a>
+                    </li>
+                    {{ /req.user }}
                 </ul>
             </div>
         </div>

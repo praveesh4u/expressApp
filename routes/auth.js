@@ -4,16 +4,26 @@
     var router;
     router = express.Router();
     router.get('/login', function(req, res, next) {
-      console.log(req.flash('error'));
-      console.log(req.flash('info'));
-      console.log(req.flash('warning'));
-      return res.render('auth/login', {});
+      if (req.user) {
+        res.redirect('/');
+      }
+      req.flash('error', 'Flash is back!');
+      req.flash('info', 'Flash is back!');
+      return res.render('auth/login', {
+        test: 'qwqwqwqwqw',
+        messages: req.flash('error'),
+        tt: ['test', '55555', '77777']
+      });
     });
     router.post('/login', passport.authenticate('local-db', {
-      successRedirect: '/',
       failureRedirect: '/login',
+      successRedirect: '/',
       failureFlash: true
-    }));
+    }), function(req, res, next) {
+      return res.render('/index', {
+        'test': 'test'
+      });
+    });
     router.get('/logout', function(req, res, next) {
       req.logout();
       return res.redirect('/');

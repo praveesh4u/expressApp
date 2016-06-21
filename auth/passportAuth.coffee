@@ -9,11 +9,15 @@ module.exports = (passport, LocalStrategy)->
         return done(null, false, { message: 'Incorrect password.' }) if status is false
         return done(null, user) if status is true
 
-  passport.serializeUser (user, done)->
-    done(null, user.id)
-  passport.deserializeUser (id, done)->
-    GLOBAL.db.User.findById id, done
-  return
+  passport.serializeUser (user, done) ->
+    done null, user.id
+    return
+  passport.deserializeUser (id, done) ->
+    GLOBAL.db.User.findById id, (user) ->
+      console.log user.email
+      done null, user
+      return
+    return
 
 
 
